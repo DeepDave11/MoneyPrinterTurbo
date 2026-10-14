@@ -17,16 +17,10 @@ from functools import lru_cache
 from typing import Callable, List
 from loguru import logger
 import numpy as np
-from moviepy import (
-    AudioFileClip,
-    ColorClip,
-    CompositeAudioClip,
-    CompositeVideoClip,
-    ImageClip,
-    TextClip,
-    VideoFileClip,
-    afx,
-)
+from moviepy.audio.io.AudioFileClip import AudioFileClip
+from moviepy.video.io.ImageClip import ImageClip
+from moviepy.video.compositing.CompositeVideoClip import CompositeVideoClip
+from moviepy.video.compositing.concatenate import concatenate_videoclips
 from moviepy.video.tools.subtitles import SubtitlesClip
 from PIL import Image, ImageColor, ImageDraw, ImageFont, ImageOps
 
